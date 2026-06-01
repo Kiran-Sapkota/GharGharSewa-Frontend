@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import "tailwindcss";
+
+/* Configure Tailwind v4 to use 'class' strategy for dark mode */
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --font-outfit: "Outfit", sans-serif;
+  
+  /* Light Palette */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --text-primary: #0f172a;
+  --text-secondary: #64748b;
+  --accent: #10b981; 
+  --accent-hover: #059669;
+  --border: #e2e8f0;
+  --card-bg: #ffffff;
+}
+
+.dark {
+  /* Dark Palette */
+  --bg-primary: #0f172a; 
+  --bg-secondary: #020617; 
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --accent: #34d399; 
+  --accent-hover: #10b981;
+  --border: #1e293b;
+  --card-bg: #1e293b;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-outfit);
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1), color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -0.025em;
+}
+
+/* Glassmorphism utility */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.dark .glass {
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
