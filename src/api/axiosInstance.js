@@ -2,7 +2,7 @@ import axios from "axios";
 import { getToken } from "../utils/token";
 
 const axiosInstance = axios.create({
-  baseURL: "http://localhost:5000/api",
+  baseURL: "https://ghar-ghar-sewa-backend.vercel.app/api",
   headers: {
     "Content-Type": "application/json",
   },
